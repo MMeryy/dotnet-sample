@@ -1,8 +1,8 @@
-name: docker_build
+name: docker _build
 on: [push] # The Trigger
   
 jobs:
-  call-template: 
+  run-template: 
     uses: MMeryy/Reusable-Templates/.github/workflows/ci.yml@main
     with:
       environment: 'production'
