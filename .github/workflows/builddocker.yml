@@ -1,18 +1,16 @@
-name: docker build
-on: [push] # The Trigger
-  
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+   # secrets:
+     # DOCKER_TOKEN:
+       # required: true
+
 jobs:
-  run-template: 
-    uses: MMeryy/Reusable-Templates/.github/workflows/ci.yml@main
-    with:
-      environment: 'production'
-      port_number: 8080
-      debug_mode: true
-   print-meron-values:
-     runs-on: ubuntu-latest
-     steps:
-        name: Print Values
-        run: | 
-          echo "Environment: ${environment}
-    #secrets:
-      #DOCKER_TOKEN: ${{ secrets.MY_PROD_TOKEN }}
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploying to ${{ inputs.environment }}"
+      #- run: docker login -u user -p ${{ secrets.DOCKER_TOKEN }}
