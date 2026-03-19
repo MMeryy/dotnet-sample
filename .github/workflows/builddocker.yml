@@ -6,7 +6,7 @@ jobs:
     uses: MMeryy/Reusable-Templates/.github/workflows/ci.yml@main
     with:
       environment: 'production'
-      port: 8080
+      port_number: 8080
       debug_mode: true
     secrets:
       DOCKER_TOKEN: ${{ secrets.MY_PROD_TOKEN }}
