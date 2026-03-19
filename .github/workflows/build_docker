@@ -3,7 +3,7 @@ on: [push] # The Trigger
   
 jobs:
   call-template: 
-    uses: Reusable-Templates/.github/workflows/ci.yml
+    uses: MMeryy/Reusable-Templates/.github/workflows/ci.yml@main
     with:
       environment: 'production'
     #secrets:
