@@ -1,0 +1,12 @@
+name: Hello World
+on: [push] # The Trigger
+
+jobs:
+  build-app: # The Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        run: echo "Starting the build..." # The Step
+
+      - name: Check version
+        run: node -v
