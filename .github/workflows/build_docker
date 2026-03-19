@@ -1,4 +1,4 @@
-name: docker _build
+name: docker build
 on: [push] # The Trigger
   
 jobs:
