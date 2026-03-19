@@ -11,6 +11,6 @@ jobs:
       - name: Check version
         run: node -v
   run-template:
-    uses: ./.github/workflows/template1.yml
-    with:
+    uses: Reusable-Templates/.github/workflows/template1.yml
+   with:
       node-version: '20'
