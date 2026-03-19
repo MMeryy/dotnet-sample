@@ -2,8 +2,8 @@ name: docker_build
 on: [push] # The Trigger
   
 jobs:
-  call-template: uses: Reusable-Templates/.github/workflows/
-    /ci.yml
+  call-template: 
+    uses: Reusable-Templates/.github/workflows/ci.yml
     with:
       environment: 'production'
     #secrets:
