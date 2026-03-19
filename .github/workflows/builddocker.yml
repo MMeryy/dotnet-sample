@@ -8,5 +8,11 @@ jobs:
       environment: 'production'
       port_number: 8080
       debug_mode: true
+   print-meron-values:
+     runs-on: ubuntu-latest
+     steps:
+        name: Print Values
+        run: | 
+          echo "Environment: ${environment}
     #secrets:
       #DOCKER_TOKEN: ${{ secrets.MY_PROD_TOKEN }}
