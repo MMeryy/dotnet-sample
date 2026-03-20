@@ -1,16 +1,13 @@
-on:
-  workflow_call:
-    inputs:
-      environment:
-        required: true
-        type: string
-   # secrets:
-     # DOCKER_TOKEN:
-       # required: true
+name: docker build
+on: [push] # The Trigger
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Deploying to ${{ inputs.environment }}"
-      #- run: docker login -u user -p ${{ secrets.DOCKER_TOKEN }}
+  run-template:
+     uses: MMeryy/Reusable-Templates/.github/workflows/ci.yml@main
+     with: 
+       environment: Production
+       debug_mode: true
+       port_number: 8080
+           
+           
+        
