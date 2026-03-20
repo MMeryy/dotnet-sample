@@ -8,6 +8,9 @@ jobs:
        environment: Production
        debug_mode: true
        port_number: 8080
+     permissions:
+      contents: read
+      packages: write
            
            
         
