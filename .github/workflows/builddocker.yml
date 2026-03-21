@@ -7,7 +7,7 @@ jobs:
     #steps:
       #- name: Say hello
        # run: echo "Starting the build..." # The Step
-      # - name: Check version
+      # - name: Check version 
       #   run: node -v
   run-template:
     #uses: Reusable-Templates/.github/workflows/template1.yml
