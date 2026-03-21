@@ -3,7 +3,7 @@ on: [push] # The Trigger
 
 jobs:
   #build-app: # The Job
-  run-template:
+  running-template:
     #uses: Reusable-Templates/.github/workflows/template1.yml
     uses: MMeryy/Reusable-Templates/.github/workflows/ci.yml@main
     with:
