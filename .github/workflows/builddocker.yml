@@ -1,16 +1,19 @@
-name: docker build
+name: Hello World
 on: [push] # The Trigger
 
 jobs:
+  #build-app: # The Job
+    #runs-on: ubuntu-latest
+    #steps:
+      #- name: Say hello
+       # run: echo "Starting the build..." # The Step
+
+      # - name: Check version
+      #   run: node -v
   run-template:
-     uses: MMeryy/Reusable-Templates/.github/workflows/ci.yml@main
-     with: 
-       environment: Production
-       debug_mode: true
-       port_number: 8080
-     permissions:
-      contents: read
-      packages: write
-           
-           
-        
+    #uses: Reusable-Templates/.github/workflows/template1.yml
+    uses: MMeryy/Reusable-Templates/.github/workflows/ci.yml@main
+    with:
+      environment: production
+      debug_mode: true
+      port_number: 8080
